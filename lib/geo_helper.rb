@@ -34,7 +34,7 @@ module GeoHelper
 
 
     #37.788022,-122.399797"
-    box = { delta_longitude: delta_longitude, north_latitude: latitude_max  ,south_latitude: latitude_min, east_longitude: longitude_max, west_longitude: longitude_min }
+    box = {north_latitude: latitude_max  ,south_latitude: latitude_min, east_longitude: longitude_max, west_longitude: longitude_min }
   end
 
 end

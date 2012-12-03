@@ -1,7 +1,6 @@
 
+<h1>Review for: <%= Shop.find(params[:format]).name %></h1>
 
-<div id="top-border"></div>
-Review for: <%= Shop.find(params[:format]).name %>
 <%= form_for(@visit) do |f| %>
 
   <%= f.label 'wifi:' %>
