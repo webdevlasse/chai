@@ -70,12 +70,11 @@ describe Shop do
     end
 
     # Why isn't this working? Have someone look over this - address should change, no?
-    xit "#update_or_create_by_name_and_latitude_and_longitude: updates correctly" do
+    it "#update_or_create_by_name_and_latitude_and_longitude: updates correctly" do
       @shop1.address.should == "717 California Ave, San Francisco, CA"
-      # @shop1.update_attributes(:address => "715 California Ave, San Francisco, CA")
-      params = {:name => "Boot Coffee",:address => "715 California Ave, San Francisco, CA", :latitude => 37.7896539, :longitude => -122.4019653, :rating => 4, :yelp_url => "http://www.devbootcamp.com", :img_url => "http://devbootcamp.com/imgs/teaching-large-sherif.png"}
+      params = {:name => "Boot Coffee", :latitude => 37.7896539, :longitude => -122.4019653, :address => "715 California Ave, San Francisco, CA", :rating => 1.5, }
       Shop.update_or_create_by_name_and_latitude_and_longitude(params)
-      @shop1.address.should == "715 California Ave, San Francisco, CA"
+      @shop1.reload.address.should == "715 California Ave, San Francisco, CA"
     end
   end
 
@@ -86,12 +85,14 @@ describe Shop do
       @test_shop = FactoryGirl.create(:shop1)
     end
 
-    it "#calculate_chai_score: should calculate the chai score correctly" do
+    # it text more descriptive and create visits without FG so the values are visible here
+    it "#calculate_chai_score: should calculate the shop rating (chai score) correctly" do
       visit1 = FactoryGirl.create(:visit1)
       visit2 = FactoryGirl.create(:visit2)
       @test_shop.calculate_chai_score.should be_within(0.1).of(4.83)
     end
 
+    # expect block in here!?
     it "#calculate_and_save_chai_score: should calculate and save score correctly" do
       @test_shop.chai_score.should == nil
       @test_shop.calculate_and_save_chai_score
@@ -99,6 +100,8 @@ describe Shop do
     end
   end
 
+  # if there are no visits coffee shop shouldn't return nil
+  # may happen if you calculate_chai_score doesn't return any values
 
   describe "Find the right shops in my proximity" do
     before (:all) do
