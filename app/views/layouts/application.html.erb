@@ -43,11 +43,21 @@
 
     <div class="container">
 
-        <div id="logo"><%= link_to(image_tag("Chai.png"), root_path) %>
+        <div id="logo">
+          <%= link_to(image_tag("Chai.png"), root_path) %>
           <%= render "pages/signupinout" %>
-            <div id="top-border"></div>
         </div>
+          <div id="top-border"></div>
 
+
+      <!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
+      <!-- The terms of service are available at http://www.google.com/cse/docs/tos.html -->
+      <!-- Put the following javascript before the closing </head> tag. -->
+   
+
+      <!-- Place this tag where you want both of the search box and the search results to render -->
+      <gcse:search></gcse:search>
+                                      
 
         <%= yield %>
 

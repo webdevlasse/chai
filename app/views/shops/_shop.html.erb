@@ -1,0 +1,21 @@
+
+<h2><%= @shop.name %></h2>
+
+<ul id="shop_info_list">
+  <li><%= link_to "Look this shop up on Yelp", @shop.yelp_url %></li>
+  <li>This shops Chai Score: <%= @shop.chai_score %></li>
+  <li>This shops yelp rating: <%= @shop.rating %></li>
+  <li><%= @shop.address %></li>
+  <li><%= @shop.city %></li>
+  <li><%= @shop.state_code %></li>
+  <li><%= @shop.postal_code %></li>
+  <li><%= @shop.country_code %></li>
+  <% if @shop.phone.nil? %>
+    <li>No phone number on file</li>
+  <% else %>
+  <li><%= @shop.phone %></li>
+  <% end -%>
+</ul>
+
+<div id="shop_image"><%= image_tag @shop.img_url %></div>
+

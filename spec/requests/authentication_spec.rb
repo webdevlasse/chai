@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'simplecov'
+SimpleCov.start 'rails'
 
 ##############################################################################
 # add:
@@ -26,20 +28,18 @@ describe "Authentification cycle working correctly: " do
     current_path.should eq(new_user_registration_path)
   end
 
-  xit "Lets User Sign Up from Home Page" do
+  it "Lets User Sign Up from Home Page" do
+    User.destroy_all
     visit root_path
     expect(page).to have_link("Sign up!")
     click_link "Sign up!"
     current_path.should eq(new_user_registration_path)
     within "#new_user" do
       fill_in "Email", :with => @user1.email
-      fill_in "user_password", :with => @user1.password
-      fill_in "user_password_confirmation", :with => @user1.password
+      fill_in "user_password", :with => "111111"
+      fill_in "user_password_confirmation", :with => "111111"
       click_button "Sign up"
     end
-    # shouldn't this redirect to root_path??
-    # also :js => true gets stuck at sign Up button press :S
-    #current_path.should eq(root_path)
     current_path.should eq(root_path)
   end
 
@@ -107,5 +107,49 @@ describe "Authentification cycle working correctly: " do
     end
     click_button "Send me reset password instructions"
     current_path.should eq(new_user_session_path)
+  end
+
+  it "Shows Edit User when Signed in link is clicked" do
+    visit root_path
+    click_link "Sign in"
+    within "#new_user" do
+      fill_in "Email", :with => @user2.email
+      fill_in "user_password", :with => @user2.password
+      click_button "Sign in"
+    end
+    visit root_path
+    click_link "#{@user2.email}"
+    current_path.should == edit_user_registration_path
+  end
+
+  it "Lets User edit/change the password" do
+    visit root_path
+    click_link "Sign in"
+    within "#new_user" do
+      fill_in "Email", :with => @user2.email
+      fill_in "user_password", :with => @user2.password
+      click_button "Sign in"
+    end
+    visit root_path
+    click_link "#{@user2.email}"
+    current_path.should == edit_user_registration_path
+    within "#edit_user" do
+      fill_in "Email", :with => @user2.email
+      fill_in 'user_password', :with => "111111"
+      fill_in 'user_password_confirmation', :with => "111111"
+      fill_in "Current password", :with => @user2.password
+      click_button "Update"
+    end
+    current_path.should eq(root_path)
+    click_link "Sign out"
+    visit root_path
+    click_link "Sign in"
+    current_path.should eq(new_user_session_path)
+    within "#new_user" do
+      fill_in "Email", :with => @user2.email
+      fill_in "user_password", :with => "111111"
+      click_button "Sign in"
+    end
+    current_path.should eq(root_path)
   end
 end

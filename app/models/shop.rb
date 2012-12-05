@@ -1,7 +1,11 @@
 class Shop < ActiveRecord::Base
-  attr_accessible :name, :latitude, :longitude, :rating, :yelp_url, :img_url, :address
+  attr_accessible :name, :latitude, :longitude, :rating, :yelp_url,
+   :img_url, :address, :city, :state_code, :postal_code, :country_code, :phone
   has_many :visits
   validates :name, :uniqueness => { :scope => [:latitude , :longitude] }
+
+
+  # make sure that the default chai_score value is set to 0 instead of nil when entered in DB
 
 
   def calculate_chai_score
@@ -10,6 +14,8 @@ class Shop < ActiveRecord::Base
 
 # checks for the shops chai rating and if it's nil changes it to zero
   def calculate_and_save_chai_score
+    # check if it's even possible for coffeeshop to have nil?
+    # could become just "update chai_score"
     score = calculate_chai_score
     score.nil? ? (self.chai_score = 0) : (self.chai_score = score)
     self.save
@@ -26,7 +32,7 @@ class Shop < ActiveRecord::Base
 
   def self.fetch_results_by_location(params)
     location = { latitude: params[:latitude], longitude: params[:longitude] }
-    box = GeoHelper.bounding_box(location,3)
+    box = GeoHelper.bounding_box(location,1.6)
     shops = Shop.where("latitude <= ? AND latitude >= ? AND longitude <= ? AND longitude >= ?",
                box[:north_latitude], box[:south_latitude], box[:east_longitude], box[:west_longitude])
   end
