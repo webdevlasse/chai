@@ -1,0 +1,27 @@
+<div class="modal-body">
+<%- model_class = Shop -%>
+
+<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+
+<table class="table table-striped" id="shops-results">
+
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name( :name ) %></th>
+      <th><%= model_class.human_attribute_name( :rating ) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% shops.each_with_index do |shop, index| %>
+      <tr class='shop-info-row', data-id="<%= index %>" >
+        <td><%= link_to( shop.name, shop_path( shop ) ) %></td>
+        <td><%= shop.chai_score.round( 1 ) %></td>
+        <td><%= link_to "Rate", shop_path( shop ) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+</div>
+

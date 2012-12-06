@@ -11,41 +11,42 @@ FactoryGirl.define do
     password "000000"
   end
 
-
-  factory :shop1, class: Shop do
-    id         1
+  factory :shop do
+    sequence(:name) { |n| "Shop #{n}" }
     address    "717 California Ave, San Francisco, CA"
-    name       "Boot Coffee"
+    rating     4.5
+    yelp_url  "http://www.devbootcamp.com"
+    img_url   "http://devbootcamp.com/imgs/teaching-large-sherif.png"
     latitude   37.7896539
     longitude  -122.4019653
-    rating     4.5
-    yelp_url  "http://www.devbootcamp.com"
-    img_url   "http://devbootcamp.com/imgs/teaching-large-sherif.png"
     chai_score nil
+
+    factory :shop1, parent: :shop do
+      name       "Boot Coffee"
+      latitude   37.7896539
+      longitude  -122.4019653
+    end
+
+    factory :shop2, parent: :shop do
+      name       "FlatIron Coffee"
+      latitude   17.7896539
+      longitude  -122.4019653
+    end
   end
 
-  factory :shop2, class: Shop do
-    id         2
-    address    "717 California Ave, San Francisco, CA"
-    name       "FlatIron Coffee"
-    latitude   17.7896539
-    longitude  -122.4019653
-    rating     4.5
-    yelp_url  "http://www.devbootcamp.com"
-    img_url   "http://devbootcamp.com/imgs/teaching-large-sherif.png"
-    chai_score nil
-  end
+
+
 
 
   factory :visit1, class: Visit do
-    shop_id 1
+    shop
     wifi 2
     power 3
     atmosphere 4
   end
 
   factory :visit2, class: Visit do
-    shop_id 1
+    shop
     wifi 5
     power 7
     atmosphere 8

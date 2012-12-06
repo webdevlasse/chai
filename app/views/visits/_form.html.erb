@@ -1,18 +1,16 @@
-
-<h1>Review for: <%= Shop.find(params[:format]).name %></h1>
-
-<%= form_for(@visit) do |f| %>
-
+<div id="shop-card">
+<!--   <h2>Review <%= @shop.name %>!</h2> -->
+  <%= form_for @visit , :class => 'rating_form' do |f| %>
   <%= f.label 'wifi:' %>
-  <%=f.select :wifi, options_for_select((1..10))%>
+  <%=f.range_field :wifi, :in => 1...10 %>
   <%= f.label 'power sockets:'%>
-  <%=f.select :power, options_for_select((1..10))%>
+  <%=f.range_field :power, :in => 1...10 %>
   <%= f.label 'atmosphere:'%>
-  <%=f.select :atmosphere, options_for_select((1..10))%>
+  <%=f.range_field :atmosphere, :in => 1...10 %>
 
   <!-- Needs code review by staff! -->
-  <%= f.hidden_field :shop_id, { :value => Shop.find(params[:format]).id } %>
-  <%= f.submit "Rate your visit", :class => "btn btn-medium btn-primary" %>
-
-<% end %>
+  <%= f.hidden_field :shop_id, { :value => @shop.id } %>
+  <%= f.submit "Rate your visit", :class => "btn btn-small btn-primary" %>
+  <% end %>
+</div>
 

@@ -51,12 +51,13 @@ describe Shop do
     end
 
     it "#calculate_chai_score: should calculate the chai score correctly" do
-      visit1 = FactoryGirl.create(:visit1)
-      visit2 = FactoryGirl.create(:visit2)
+      visit1 = FactoryGirl.create(:visit1, shop: @test_shop)
+      visit2 = FactoryGirl.create(:visit2, shop: @test_shop)
       @test_shop.calculate_chai_score.should be_within(0.1).of(4.83)
     end
 
     it "#calculate_and_save_chai_score: should calculate and save score correctly" do
+      @test_shop.chai_score = nil
       @test_shop.chai_score.should == nil
       @test_shop.calculate_and_save_chai_score
       @test_shop.chai_score.should == 0
@@ -87,21 +88,11 @@ describe Shop do
 
     # it text more descriptive and create visits without FG so the values are visible here
     it "#calculate_chai_score: should calculate the shop rating (chai score) correctly" do
-      visit1 = FactoryGirl.create(:visit1)
-      visit2 = FactoryGirl.create(:visit2)
+      visit1 = FactoryGirl.create(:visit1, shop: @test_shop)
+      visit2 = FactoryGirl.create(:visit2, shop: @test_shop)
       @test_shop.calculate_chai_score.should be_within(0.1).of(4.83)
     end
-
-    # expect block in here!?
-    it "#calculate_and_save_chai_score: should calculate and save score correctly" do
-      @test_shop.chai_score.should == nil
-      @test_shop.calculate_and_save_chai_score
-      @test_shop.chai_score.should == 0
-    end
   end
-
-  # if there are no visits coffee shop shouldn't return nil
-  # may happen if you calculate_chai_score doesn't return any values
 
   describe "Find the right shops in my proximity" do
     before (:all) do

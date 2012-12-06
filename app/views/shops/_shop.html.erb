@@ -1,21 +1,15 @@
 
-<h2><%= @shop.name %></h2>
+<div class='info-window' >
 
-<ul id="shop_info_list">
-  <li><%= link_to "Look this shop up on Yelp", @shop.yelp_url %></li>
-  <li>This shops Chai Score: <%= @shop.chai_score %></li>
-  <li>This shops yelp rating: <%= @shop.rating %></li>
-  <li><%= @shop.address %></li>
-  <li><%= @shop.city %></li>
-  <li><%= @shop.state_code %></li>
-  <li><%= @shop.postal_code %></li>
-  <li><%= @shop.country_code %></li>
-  <% if @shop.phone.nil? %>
-    <li>No phone number on file</li>
-  <% else %>
-  <li><%= @shop.phone %></li>
-  <% end -%>
-</ul>
+  <div id = 'info-window-address'>
+    <%= link_to shop.name, shop_path(shop.id) %></br>
 
-<div id="shop_image"><%= image_tag @shop.img_url %></div>
+    <%= shop.address %></br>
+    <%= shop.city %>, <%= shop.state_code %> <%= shop.postal_code %>
+  </div>
 
+  <div id = 'info-window-image'>
+    <%= image_tag shop.img_url %>
+  </div>
+
+</div>

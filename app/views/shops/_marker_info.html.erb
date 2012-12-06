@@ -2,11 +2,12 @@
 <div class='info-window' >
 
 	<div id = 'info-window-address'>
-		<%= link_to marker_info.name, marker_info.yelp_url %></br>
+		<%= link_to marker_info.name, shop_path(marker_info.id) %></br>
+
 		<%= marker_info.address %></br>
 		<%= marker_info.city %>, <%= marker_info.state_code %> <%= marker_info.postal_code %>
 	</div>
-	
+
 	<div id = 'info-window-image'>
 		<%= image_tag marker_info.img_url %>
 	</div>

@@ -1,5 +1,5 @@
 [0.000][INFO]:      ChromeDriver 21.0.1180.4 /usr/local/bin/chromedriver
-[0.215][FINE]:      Initializing session with capabilities {
+[0.224][FINE]:      Initializing session with capabilities {
    "browserName": "chrome",
    "chrome.detach": true,
    "chromeOptions": {
@@ -14,11 +14,11 @@
    "version": ""
 }
 
-[0.216][INFO]:      Using named testing interface
-[1.072][INFO]:      Connected to Chrome successfully. Version: 23.0.1271.95
-[1.104][FINE]:      Command received (/session/55555f6801d6463b367917cfe2be4e54)
-[1.104][FINE]:      Command finished (/session/55555f6801d6463b367917cfe2be4e54) with response {
-   "sessionId": "55555f6801d6463b367917cfe2be4e54",
+[0.226][INFO]:      Using named testing interface
+[1.192][INFO]:      Connected to Chrome successfully. Version: 23.0.1271.95
+[1.228][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5)
+[1.228][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
    "status": 0,
    "value": {
       "acceptSslCerts": false,
@@ -41,93 +41,589 @@
    }
 }
 
-[1.107][FINE]:      Command received (/session/55555f6801d6463b367917cfe2be4e54/url) with params {
-   "url": "http://127.0.0.1:58850/shops/1"
+[1.229][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/url) with params {
+   "url": "http://127.0.0.1:60284/shops/357"
 }
 
-[1.108][FINER]:     Waiting for all views to stop loading...
-[1.110][FINER]:     Done waiting for all views to stop loading
-[2.744][FINER]:     Waiting for all views to stop loading...
-[2.778][FINER]:     Done waiting for all views to stop loading
-[2.778][FINE]:      Command finished (/session/55555f6801d6463b367917cfe2be4e54/url) with response {
-   "sessionId": "55555f6801d6463b367917cfe2be4e54",
+[1.229][FINER]:     Waiting for all views to stop loading...
+[1.229][FINER]:     Done waiting for all views to stop loading
+[1.801][FINER]:     Waiting for all views to stop loading...
+[1.836][FINER]:     Done waiting for all views to stop loading
+[1.836][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/url) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
    "status": 0,
    "value": {
 
    }
 }
 
-[2.785][FINE]:      Command received (/session/55555f6801d6463b367917cfe2be4e54/elements) with params {
+[1.839][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
    "using": "xpath",
    "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
 }
 
-[2.785][FINER]:     Waiting for all views to stop loading...
-[2.786][FINER]:     Done waiting for all views to stop loading
-[2.803][FINER]:     Waiting for all views to stop loading...
-[2.804][FINER]:     Done waiting for all views to stop loading
-[2.804][FINE]:      Command finished (/session/55555f6801d6463b367917cfe2be4e54/elements) with response {
-   "sessionId": "55555f6801d6463b367917cfe2be4e54",
+[1.840][FINER]:     Waiting for all views to stop loading...
+[1.841][FINER]:     Done waiting for all views to stop loading
+[1.870][FINER]:     Waiting for all views to stop loading...
+[1.871][FINER]:     Done waiting for all views to stop loading
+[1.871][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
    "status": 0,
-   "value": [ {
-      "ELEMENT": ":wdc:1354588620143"
-   } ]
+   "value": [  ]
 }
 
-[2.850][FINE]:      Command received (/session/55555f6801d6463b367917cfe2be4e54/element/:wdc:1354588620143/click) with params {
-
+[1.924][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
 }
 
-[2.850][FINER]:     Waiting for all views to stop loading...
-[2.851][FINER]:     Done waiting for all views to stop loading
-[2.915][FINER]:     Waiting for all views to stop loading...
-[4.182][FINER]:     Done waiting for all views to stop loading
-[4.182][FINE]:      Command finished (/session/55555f6801d6463b367917cfe2be4e54/element/:wdc:1354588620143/click) with response {
-   "sessionId": "55555f6801d6463b367917cfe2be4e54",
+[1.924][FINER]:     Waiting for all views to stop loading...
+[1.924][FINER]:     Done waiting for all views to stop loading
+[1.927][FINER]:     Waiting for all views to stop loading...
+[1.928][FINER]:     Done waiting for all views to stop loading
+[1.928][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[1.980][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[1.980][FINER]:     Waiting for all views to stop loading...
+[1.980][FINER]:     Done waiting for all views to stop loading
+[1.983][FINER]:     Waiting for all views to stop loading...
+[1.983][FINER]:     Done waiting for all views to stop loading
+[1.984][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.036][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.036][FINER]:     Waiting for all views to stop loading...
+[2.037][FINER]:     Done waiting for all views to stop loading
+[2.039][FINER]:     Waiting for all views to stop loading...
+[2.040][FINER]:     Done waiting for all views to stop loading
+[2.040][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.092][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.092][FINER]:     Waiting for all views to stop loading...
+[2.093][FINER]:     Done waiting for all views to stop loading
+[2.096][FINER]:     Waiting for all views to stop loading...
+[2.096][FINER]:     Done waiting for all views to stop loading
+[2.096][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.149][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.149][FINER]:     Waiting for all views to stop loading...
+[2.149][FINER]:     Done waiting for all views to stop loading
+[2.152][FINER]:     Waiting for all views to stop loading...
+[2.152][FINER]:     Done waiting for all views to stop loading
+[2.152][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.204][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.204][FINER]:     Waiting for all views to stop loading...
+[2.204][FINER]:     Done waiting for all views to stop loading
+[2.207][FINER]:     Waiting for all views to stop loading...
+[2.207][FINER]:     Done waiting for all views to stop loading
+[2.207][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.259][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.259][FINER]:     Waiting for all views to stop loading...
+[2.260][FINER]:     Done waiting for all views to stop loading
+[2.263][FINER]:     Waiting for all views to stop loading...
+[2.263][FINER]:     Done waiting for all views to stop loading
+[2.263][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.315][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.316][FINER]:     Waiting for all views to stop loading...
+[2.316][FINER]:     Done waiting for all views to stop loading
+[2.319][FINER]:     Waiting for all views to stop loading...
+[2.319][FINER]:     Done waiting for all views to stop loading
+[2.319][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.372][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.372][FINER]:     Waiting for all views to stop loading...
+[2.372][FINER]:     Done waiting for all views to stop loading
+[2.375][FINER]:     Waiting for all views to stop loading...
+[2.376][FINER]:     Done waiting for all views to stop loading
+[2.376][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.428][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.428][FINER]:     Waiting for all views to stop loading...
+[2.429][FINER]:     Done waiting for all views to stop loading
+[2.432][FINER]:     Waiting for all views to stop loading...
+[2.432][FINER]:     Done waiting for all views to stop loading
+[2.432][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.485][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.485][FINER]:     Waiting for all views to stop loading...
+[2.485][FINER]:     Done waiting for all views to stop loading
+[2.488][FINER]:     Waiting for all views to stop loading...
+[2.488][FINER]:     Done waiting for all views to stop loading
+[2.488][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.540][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.540][FINER]:     Waiting for all views to stop loading...
+[2.540][FINER]:     Done waiting for all views to stop loading
+[2.543][FINER]:     Waiting for all views to stop loading...
+[2.543][FINER]:     Done waiting for all views to stop loading
+[2.543][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.596][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.596][FINER]:     Waiting for all views to stop loading...
+[2.596][FINER]:     Done waiting for all views to stop loading
+[2.599][FINER]:     Waiting for all views to stop loading...
+[2.599][FINER]:     Done waiting for all views to stop loading
+[2.599][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.652][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.652][FINER]:     Waiting for all views to stop loading...
+[2.652][FINER]:     Done waiting for all views to stop loading
+[2.655][FINER]:     Waiting for all views to stop loading...
+[2.655][FINER]:     Done waiting for all views to stop loading
+[2.655][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.708][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.708][FINER]:     Waiting for all views to stop loading...
+[2.708][FINER]:     Done waiting for all views to stop loading
+[2.711][FINER]:     Waiting for all views to stop loading...
+[2.711][FINER]:     Done waiting for all views to stop loading
+[2.711][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.764][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.764][FINER]:     Waiting for all views to stop loading...
+[2.764][FINER]:     Done waiting for all views to stop loading
+[2.767][FINER]:     Waiting for all views to stop loading...
+[2.768][FINER]:     Done waiting for all views to stop loading
+[2.768][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.820][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.821][FINER]:     Waiting for all views to stop loading...
+[2.821][FINER]:     Done waiting for all views to stop loading
+[2.824][FINER]:     Waiting for all views to stop loading...
+[2.824][FINER]:     Done waiting for all views to stop loading
+[2.824][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.877][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.877][FINER]:     Waiting for all views to stop loading...
+[2.877][FINER]:     Done waiting for all views to stop loading
+[2.880][FINER]:     Waiting for all views to stop loading...
+[2.880][FINER]:     Done waiting for all views to stop loading
+[2.880][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.932][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.932][FINER]:     Waiting for all views to stop loading...
+[2.933][FINER]:     Done waiting for all views to stop loading
+[2.935][FINER]:     Waiting for all views to stop loading...
+[2.936][FINER]:     Done waiting for all views to stop loading
+[2.936][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[2.988][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[2.988][FINER]:     Waiting for all views to stop loading...
+[2.989][FINER]:     Done waiting for all views to stop loading
+[2.991][FINER]:     Waiting for all views to stop loading...
+[2.992][FINER]:     Done waiting for all views to stop loading
+[2.992][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.045][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.045][FINER]:     Waiting for all views to stop loading...
+[3.045][FINER]:     Done waiting for all views to stop loading
+[3.048][FINER]:     Waiting for all views to stop loading...
+[3.048][FINER]:     Done waiting for all views to stop loading
+[3.048][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.101][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.101][FINER]:     Waiting for all views to stop loading...
+[3.101][FINER]:     Done waiting for all views to stop loading
+[3.104][FINER]:     Waiting for all views to stop loading...
+[3.104][FINER]:     Done waiting for all views to stop loading
+[3.104][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.157][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.157][FINER]:     Waiting for all views to stop loading...
+[3.157][FINER]:     Done waiting for all views to stop loading
+[3.160][FINER]:     Waiting for all views to stop loading...
+[3.160][FINER]:     Done waiting for all views to stop loading
+[3.160][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.213][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.213][FINER]:     Waiting for all views to stop loading...
+[3.213][FINER]:     Done waiting for all views to stop loading
+[3.216][FINER]:     Waiting for all views to stop loading...
+[3.216][FINER]:     Done waiting for all views to stop loading
+[3.216][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.321][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.321][FINER]:     Waiting for all views to stop loading...
+[3.322][FINER]:     Done waiting for all views to stop loading
+[3.324][FINER]:     Waiting for all views to stop loading...
+[3.324][FINER]:     Done waiting for all views to stop loading
+[3.324][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.377][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.377][FINER]:     Waiting for all views to stop loading...
+[3.378][FINER]:     Done waiting for all views to stop loading
+[3.383][FINER]:     Waiting for all views to stop loading...
+[3.383][FINER]:     Done waiting for all views to stop loading
+[3.383][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.436][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.436][FINER]:     Waiting for all views to stop loading...
+[3.436][FINER]:     Done waiting for all views to stop loading
+[3.439][FINER]:     Waiting for all views to stop loading...
+[3.439][FINER]:     Done waiting for all views to stop loading
+[3.439][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.492][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.492][FINER]:     Waiting for all views to stop loading...
+[3.492][FINER]:     Done waiting for all views to stop loading
+[3.495][FINER]:     Waiting for all views to stop loading...
+[3.496][FINER]:     Done waiting for all views to stop loading
+[3.496][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.548][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.548][FINER]:     Waiting for all views to stop loading...
+[3.548][FINER]:     Done waiting for all views to stop loading
+[3.551][FINER]:     Waiting for all views to stop loading...
+[3.551][FINER]:     Done waiting for all views to stop loading
+[3.551][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.603][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.604][FINER]:     Waiting for all views to stop loading...
+[3.604][FINER]:     Done waiting for all views to stop loading
+[3.607][FINER]:     Waiting for all views to stop loading...
+[3.607][FINER]:     Done waiting for all views to stop loading
+[3.607][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.659][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.659][FINER]:     Waiting for all views to stop loading...
+[3.660][FINER]:     Done waiting for all views to stop loading
+[3.663][FINER]:     Waiting for all views to stop loading...
+[3.663][FINER]:     Done waiting for all views to stop loading
+[3.663][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.716][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.716][FINER]:     Waiting for all views to stop loading...
+[3.716][FINER]:     Done waiting for all views to stop loading
+[3.719][FINER]:     Waiting for all views to stop loading...
+[3.719][FINER]:     Done waiting for all views to stop loading
+[3.719][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.772][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.772][FINER]:     Waiting for all views to stop loading...
+[3.772][FINER]:     Done waiting for all views to stop loading
+[3.775][FINER]:     Waiting for all views to stop loading...
+[3.775][FINER]:     Done waiting for all views to stop loading
+[3.775][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.828][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.828][FINER]:     Waiting for all views to stop loading...
+[3.828][FINER]:     Done waiting for all views to stop loading
+[3.831][FINER]:     Waiting for all views to stop loading...
+[3.831][FINER]:     Done waiting for all views to stop loading
+[3.831][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.884][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/elements) with params {
+   "using": "xpath",
+   "value": ".//a[./@href][(((./@id = 'Look this shop up on Yelp' or contains(normalize-space(string(.)), 'Loo..."
+}
+
+[3.884][FINER]:     Waiting for all views to stop loading...
+[3.885][FINER]:     Done waiting for all views to stop loading
+[3.889][FINER]:     Waiting for all views to stop loading...
+[3.889][FINER]:     Done waiting for all views to stop loading
+[3.889][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/elements) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
+   "status": 0,
+   "value": [  ]
+}
+
+[3.892][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/cookie)
+[3.892][FINER]:     Waiting for all views to stop loading...
+[3.892][FINER]:     Done waiting for all views to stop loading
+[3.895][FINER]:     Waiting for all views to stop loading...
+[3.895][FINER]:     Done waiting for all views to stop loading
+[3.895][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/cookie) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
    "status": 0,
    "value": {
 
    }
 }
 
-[4.184][FINE]:      Command received (/session/55555f6801d6463b367917cfe2be4e54/url)
-[4.184][FINER]:     Waiting for all views to stop loading...
-[4.188][FINER]:     Done waiting for all views to stop loading
-[4.263][FINER]:     Waiting for all views to stop loading...
-[4.396][FINER]:     Done waiting for all views to stop loading
-[4.396][FINE]:      Command finished (/session/55555f6801d6463b367917cfe2be4e54/url) with response {
-   "sessionId": "55555f6801d6463b367917cfe2be4e54",
-   "status": 0,
-   "value": "http://devbootcamp.com/"
-}
-
-[4.402][FINE]:      Command received (/session/55555f6801d6463b367917cfe2be4e54/cookie)
-[4.402][FINER]:     Waiting for all views to stop loading...
-[4.411][FINER]:     Done waiting for all views to stop loading
-[4.414][FINER]:     Waiting for all views to stop loading...
-[4.414][FINER]:     Done waiting for all views to stop loading
-[4.414][FINE]:      Command finished (/session/55555f6801d6463b367917cfe2be4e54/cookie) with response {
-   "sessionId": "55555f6801d6463b367917cfe2be4e54",
-   "status": 0,
-   "value": {
-
-   }
-}
-
-[4.416][FINE]:      Command received (/session/55555f6801d6463b367917cfe2be4e54/url) with params {
+[3.897][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5/url) with params {
    "url": "about:blank"
 }
 
-[4.416][FINER]:     Waiting for all views to stop loading...
-[4.416][FINER]:     Done waiting for all views to stop loading
-[4.717][FINER]:     Waiting for all views to stop loading...
-[4.743][FINER]:     Done waiting for all views to stop loading
-[4.743][FINE]:      Command finished (/session/55555f6801d6463b367917cfe2be4e54/url) with response {
-   "sessionId": "55555f6801d6463b367917cfe2be4e54",
+[3.897][FINER]:     Waiting for all views to stop loading...
+[3.897][FINER]:     Done waiting for all views to stop loading
+[4.202][FINER]:     Waiting for all views to stop loading...
+[4.234][FINER]:     Done waiting for all views to stop loading
+[4.234][FINE]:      Command finished (/session/60584548cb9f39a490675780064632e5/url) with response {
+   "sessionId": "60584548cb9f39a490675780064632e5",
    "status": 0,
    "value": {
 
    }
 }
 
-[4.760][FINE]:      Command received (/session/55555f6801d6463b367917cfe2be4e54)
+[4.245][FINE]:      Command received (/session/60584548cb9f39a490675780064632e5)
