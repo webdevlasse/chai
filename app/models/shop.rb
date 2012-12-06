@@ -3,7 +3,7 @@ class Shop < ActiveRecord::Base
    :img_url, :address, :city, :state_code, :postal_code, :country_code, :phone
   has_many :visits
   validates :name, :uniqueness => { :scope => [:latitude , :longitude] }
-
+  default_scope order("chai_score DESC")
 
   # make sure that the default chai_score value is set to 0 instead of nil when entered in DB
 
@@ -32,9 +32,20 @@ class Shop < ActiveRecord::Base
 
   def self.fetch_results_by_location(params)
     location = { latitude: params[:latitude], longitude: params[:longitude] }
-    box = GeoHelper.bounding_box(location,1.6)
+    box = GeoHelper.bounding_box(location,1)
     shops = Shop.where("latitude <= ? AND latitude >= ? AND longitude <= ? AND longitude >= ?",
                box[:north_latitude], box[:south_latitude], box[:east_longitude], box[:west_longitude])
+  end
+
+  def self.fetch_by_location(latitude, longitude)
+    shops = find_by_location(latitude, longitude)
+    shops = find_yelp_shops unless shops.length > 5
+    # find records by lat & long
+    # search yelp if there are less than 5 results
+  end
+
+  def self.find_yelp_shops(latitude, longitude)
+    shops = YelpHelper.find(latitude, longitude)
   end
 end
 

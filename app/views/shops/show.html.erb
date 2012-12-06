@@ -1,1 +1,30 @@
-<%= render :partial => 'shop' %>
+<div id="shop-card">
+  <h2><%= @shop.name %></h2>
+
+  <ul id="shop_info_list">
+    <li><%= link_to "Yelp", @shop.yelp_url %></li>
+  </br>
+    <% if @shop.chai_score.nil? %>
+      <li>This shops Chai Score: 0</li>
+    <% else %>
+      <li>This shops Chai Score: <%= @shop.chai_score.round(1) %></li>
+    <% end -%>
+    <li>This shops yelp rating: <%= @shop.rating %></li>
+    </br>
+    Address:
+    <li><%= @shop.address %></li>
+    <li><%= @shop.city %>, <%= @shop.state_code %> <%= @shop.postal_code %></li>
+
+    <% unless @shop.phone.nil? %>
+      <li><%= @shop.phone %></li>
+    <% end -%>
+  </ul>
+
+  <div id="shop_image"><%= image_tag @shop.img_url %></div>
+</div>
+
+<% if user_signed_in? %>
+  <%= render :partial => 'visits/form' %>
+<% else %>
+  <p>Please sign in to rate THIS shop</p>
+<% end -%>

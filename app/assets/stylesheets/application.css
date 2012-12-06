@@ -22,8 +22,74 @@
 
 
 /*************************************/
+/* SHOP STYLING                      */
+/*************************************/
+
+#shop-card {
+  -moz-box-shadow:inset 1px 1px 3px -6px #fceaca;
+  -webkit-box-shadow:inset 1px 1px 3px -6px #fceaca;
+  box-shadow:inset 1px 1px 3px -6px #fceaca;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffce79), color-stop(1, #eeaf41) );
+  background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
+  background-color:#ffce79;
+  -webkit-border-radius: 20px;
+  -webkit-border-bottom-right-radius: 75px;
+  -moz-border-radius: 20px;
+  -moz-border-radius-bottomright: 75px;
+  border-radius: 20px;
+  border-bottom-right-radius: 75px;
+  border:2px solid #eeb44f;
+  width: 500px;
+  padding:3px 20px;
+  font-family: 'Pacifico', sans-serif;
+  width: 500px ;
+  margin-left: auto ;
+  margin-right: auto ;
+  margin-bottom: 10px;
+
+}
+
+#shop-card img{
+  position: relative;
+  top: -187px;
+  left: 380px;
+  border: solid 3px;
+  border-radius: 5px;
+}
+
+#shop-card ul{
+  list-style-type: none;
+}
+
+#shop-card form{
+  font-size: 0.2em;
+}
+
+
+
+
+/*************************************/
 /* GENERAL STYLING                   */
 /*************************************/
+h1 {
+  font-family: 'Pacifico', sans-serif;
+}
+
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-color: red;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+p{
+  font-family: Arial, sans-serif;
+}
 
 .info-window {
   width: 275px;
@@ -38,9 +104,6 @@
   float:right;
 }
 
-.info-window #info-window-image {
-  float: right;
-}
 
 #map_canvas {
   height: 350px;
@@ -53,10 +116,6 @@
   }
 }
 
-h2 {
-  font-color: red;
-}
-
 
 #logo {
     display:inline;
@@ -66,7 +125,8 @@ h2 {
     margin-left: -20px;
 }
 
-#logo a img{ }
+#logo a img{
+  background-image:'chai_3.gif' }
 
 .signed_in_blue_links{
   padding: 34px;
@@ -85,7 +145,7 @@ h2 {
 #header_action_box li {
     display: inline;
     float: left;
-    font-family: 'Pacifico', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 5px;
 }
 
@@ -103,55 +163,6 @@ h2 {
 }
 
 
-
-
-#find-shops button{
-  -moz-box-shadow:inset 1px 1px 3px -6px #fceaca;
-  -webkit-box-shadow:inset 1px 1px 3px -6px #fceaca;
-  box-shadow:inset 1px 1px 3px -6px #fceaca;
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffce79), color-stop(1, #eeaf41) );
-  background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
-  background-color:#ffce79;
-  -moz-border-radius:32px;
-  -webkit-border-radius:32px;
-  border-radius:32px;
-  border:2px solid #eeb44f;
-  color:#ffffff;
-  font-family:arial;
-  font-size:24px;
-  font-weight:bold;
-  padding:3px 20px;
-  text-decoration:none;
-  text-shadow:2px 2px 2px #ce8e28;
-  position: relative;
-  top: 6px;
-  display:inline-block;
-  float:left;
-  margin-top: 0px;
-  margin-bottom: 17px;
-  height:50px;
-  font-family: 'Pacifico', sans-serif;
-}
-
-
-
-
-#find-shops button:hover {
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eeaf41), color-stop(1, #ffce79) );
-    background:-moz-linear-gradient( center top, #eeaf41 5%, #ffce79 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeaf41', endColorstr='#ffce79');
-    background-color:#eeaf41;
-}
-#find_shops button:active {
-    position:relative;
-    top:1px;
-}
-
-#find-shops button {
-    font-size: 30px;
-}
-
 .contact_form{
   display:inline-block;
   position: relative;
@@ -162,9 +173,12 @@ h2 {
 
 
 .modal {
-  left:60%;
-  margin-left: -300px;
+  /*left:60%;*/
+  /*margin-left: -300px;*/
 }
+
+
+
 
 
 
@@ -203,6 +217,83 @@ body.loading .vegeta {
     display: block;
 }
 
+#distant-search-field {
+  position:relative;
+  border: 1px solid red;
+  -moz-box-shadow:inset 1px 1px 3px -6px #fceaca;
+   -webkit-box-shadow:inset 1px 1px 3px -6px #fceaca;
+   box-shadow:inset 1px 1px 3px -6px #fceaca;
+   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffce79), color-stop(1, #eeaf41) );
+   background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
+   background-color:#ffce79;
+   -moz-border-radius:8px;
+   -webkit-border-radius:8px;
+   border-radius:8px;
+   border:2px solid #eeb44f;
+   color:#ffffff;
+   font-family:arial;
+   font-size:24px;
+   font-weight:bold;
+   text-decoration:none;
+   text-shadow:2px 2px 2px #ce8e28;
+   position: relative;
+   top: 6px;
+   display:inline-block;
+   float:left;
+   margin-top: 0px;
+   margin-bottom: 13px;
+   height:50px;
+   width:100%;
+   font-family: Arial, sans-serif;
+}
+#distant-search-field-text {
+  display:inline;
+  width:33%;
+  margin-left: 50px;
+  margin-right:15px;
+}
+#distant-search-field input{
+   display:inline;
+}
+
+
+
+.signup_button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+  background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+  background-color:#ededed;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  border:2px solid #dcdcdc;
+  display:inline-block;
+  color:#777777;
+  font-family:Arial;
+  font-size:16px;
+  font-weight:bold;
+  padding:6px 7px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #ffffff;
+  margin-top: 7px;
+}
+
+.signup_button:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+  background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+  background-color:#dfdfdf;
+}
+
+.signup_button:active {
+  position:relative;
+  top:1px;
+}
+
 
 
 
@@ -227,7 +318,7 @@ body.loading .vegeta {
   text-decoration:none;
   text-shadow:1px 0px 0px #528ecc;
   margin: 5px 5px 5px 150px;
-  font-family: 'Pacifico', sans-serif;
+  font-family: arial, sans-serif;
 
 }
 
@@ -248,8 +339,27 @@ body.loading .vegeta {
 
 
 #top-border {
-  border-top: solid black 3px;
+  border-top: solid #2A6A9E 3px;
 }
+
+#bottom_border{
+  border-top: solid #2A6A9E 3px;
+}
+
+#shops-results tbody tr.highlight td{
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffce79), color-stop(1, #eeaf41) );
+  background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
+  background-color:#ffce79;
+}
+
+/*#shops-results tbody tr:hover{
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffce79), color-stop(1, #eeaf41) );
+  background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
+  background-color:#ffce60;
+}*/
+
 
 
 
