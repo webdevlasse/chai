@@ -41,13 +41,13 @@
 
   <body>
 
-    <div class="container">
+    <div class="page-wrapper">
 
         <div id="logo">
           <%= link_to(image_tag("chai_3.gif"), root_path) %>
           <%= render "pages/signupinout" %>
         </div>
-          <!-- <div id="top-border"></div> -->
+        <div id="top-border"></div>
 
 
       <!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
@@ -62,12 +62,12 @@
         <%= yield %>
         <div id="bottom_border"></div>
         <nav>
-          <%= link_to_unless_current "Home", root_path%> |
-          <%= link_to_unless_current "About", about_path%> |
-          <%= link_to_unless_current "Contact", contact_path%> |
-          <%= link_to_unless_current "FAQ", faq_path%> |
+          <%= link_to_unless_current "Home", root_path, class: 'nav-link'%> |
+          <%= link_to_unless_current "About", about_path, class: 'nav-link'%> |
+          <%= link_to_unless_current "Contact", contact_path, class: 'nav-link'%> |
+          <%= link_to_unless_current "FAQ", faq_path, class: 'nav-link'%> |
         </nav>
-        <%= debug params %>
+        <%#= debug params %>
         <footer>
           <p>&copy; Chai 2012</p>
         </footer>
