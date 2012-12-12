@@ -13,12 +13,18 @@
  */
 
 @font-face {
-  font-family: "Pacifico";
-  src: url(/assets/Pacifico-webfont.eot);
-  src: local("Pacifico Heavy"), local("Pacifico-Heavy"), url(/assets/Pacifico-webfont.eot) format("embedded-opentype"), url(/assets/Pacifico-webfont.woff) format("woff"), url(/assets/Pacifico-webfont.ttf) format("truetype"), url(/assets/Pacifico-webfont.svg) format("svg");
+  font-family: "CartoGothicStd-Book";
+  src: url(/assets/CartoGothicStd-Book-webfont.eot);
+  src: local("CartoGothicStd-Book"),
+       local("CartoGothicStd-Book"),
+       url(/assets/CartoGothicStd-Book-webfont.eot) format("embedded-opentype"),
+       url(/assets/CartoGothicStd-Book-webfont.woff) format("woff"),
+       url(/assets/CartoGothicStd-Book-webfont.ttf) format("truetype"),
+       url(/assets/CartoGothicStd-Book-webfont.svg) format("svg");
   font-weight: 900;
   font-style: normal;
 }
+
 
 
 /*************************************/
@@ -42,11 +48,12 @@
   border:2px solid #eeb44f;
   width: 500px;
   padding:3px 20px;
-  font-family: 'Pacifico', sans-serif;
+  font-family: 'CartoGothicStd-Book', sans-serif;
   width: 500px ;
   margin-left: auto ;
   margin-right: auto ;
   margin-bottom: 10px;
+  margin-top: 10px;
 
 }
 
@@ -72,24 +79,52 @@
 /*************************************/
 /* GENERAL STYLING                   */
 /*************************************/
+
+tr.rating-sliders td input.btn-block{
+  margin-top: 20%;
+}
+
+#pages_headers {
+  font-size: 33px;
+  color: #2A6A9E;
+  margin: 20px 0px;
+}
+
+#pages_text {
+  font-size: 18px;
+}
+
+#distant-search-field{
+  font-family: "CartoGothicStd-Book";
+}
+
+#distant-search-field-text{
+  font-family: "CartoGothicStd-Book";
+}
+
+.page-wrapper{
+  margin-top: 20px;
+  max-width: 900px;
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.closing-border{
+  border: solid 2px;
+}
+
 h1 {
-  font-family: 'Pacifico', sans-serif;
+  font-size:33px;
+  color: #2A6A9E;
 }
 
 
 h2 {
-  font-family: Arial, sans-serif;
-  font-color: red;
+
 }
 
 
-body {
-  font-family: Arial, sans-serif;
-}
-
-p{
-  font-family: Arial, sans-serif;
-}
 
 .info-window {
   width: 275px;
@@ -104,18 +139,24 @@ p{
   float:right;
 }
 
+#map-native-results{
+  font-family: "CartoGothicStd-Book";
+}
+
+#map-native-results a{
+  font-family: "CartoGothicStd-Book";
+  text-transform: uppercase;
+}
 
 #map_canvas {
   height: 350px;
   width: 100%;
 }
 
-@media screen {
-  html, body {
-    height: auto;
-  }
-}
 
+p{
+  font-family: "CartoGothicStd-Book";
+}
 
 #logo {
     display:inline;
@@ -126,11 +167,10 @@ p{
 }
 
 #logo a img{
-  background-image:'chai_3.gif' }
+  background-image:'chai_3.gif';
+  margin-left:13px;
+  margin-top:4px; }
 
-.signed_in_blue_links{
-  padding: 34px;
-}
 
 #header_action_box {
     overflow: hidden;
@@ -217,9 +257,11 @@ body.loading .vegeta {
     display: block;
 }
 
+/*************************/
+/* Distant Search Field*/
+/*************************/
+
 #distant-search-field {
-  position:relative;
-  border: 1px solid red;
   -moz-box-shadow:inset 1px 1px 3px -6px #fceaca;
    -webkit-box-shadow:inset 1px 1px 3px -6px #fceaca;
    box-shadow:inset 1px 1px 3px -6px #fceaca;
@@ -232,32 +274,83 @@ body.loading .vegeta {
    border-radius:8px;
    border:2px solid #eeb44f;
    color:#ffffff;
-   font-family:arial;
-   font-size:24px;
+   font-family: "CartoGothicStd-Book";
    font-weight:bold;
    text-decoration:none;
    text-shadow:2px 2px 2px #ce8e28;
    position: relative;
-   top: 6px;
    display:inline-block;
    float:left;
-   margin-top: 0px;
+   margin-top: 2px;
    margin-bottom: 13px;
    height:50px;
    width:100%;
-   font-family: Arial, sans-serif;
+   padding-top: 10px;
+   /*padding-right: 3px;*/
 }
+
+#distant-search-field-inner{
+  vertical-align: middle;
+  margin: 0px auto;
+  text-align: center;
+
+}
+
+#distant-search-field #address{
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+  padding-left: 10px;
+  font-size: 1em;
+  width:65%;
+  margin-right: 1%;
+  vertical-align: middle;
+}
+
+#distant-search-field #searchRemoteResults{
+   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+  background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+  background-color:#ededed;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  border:2px solid #dcdcdc;
+  display:inline-block;
+  color:#777777;
+  font-family:Arial;
+  font-size:1.2em;
+  font-weight:bold;
+  padding:4px 3px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #ffffff;
+  margin-top: 3px;/*float: right;*/
+}
+
 #distant-search-field-text {
   display:inline;
-  width:33%;
-  margin-left: 50px;
-  margin-right:15px;
+  /*margin-left: 50px;*/
+  position: relative;
+  font-family: "CartoGothicStd-Book"
 }
 #distant-search-field input{
    display:inline;
+   line-height:30px;
+   width:275px;
+   margin-left:7px;
+   font-size:24px;
+   position: relative;
 }
 
-
+#distant-search-field button:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+  background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+  background-color:#dfdfdf;
+}
 
 .signup_button {
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -279,7 +372,7 @@ body.loading .vegeta {
   padding:6px 7px;
   text-decoration:none;
   text-shadow:1px 1px 0px #ffffff;
-  margin-top: 7px;
+  margin-top: 10px;
 }
 
 .signup_button:hover {
@@ -317,7 +410,7 @@ body.loading .vegeta {
   padding:3px 20px;
   text-decoration:none;
   text-shadow:1px 0px 0px #528ecc;
-  margin: 5px 5px 5px 150px;
+  margin: 5px 5px 5px 3px;
   font-family: arial, sans-serif;
 
 }
@@ -340,9 +433,13 @@ body.loading .vegeta {
 
 #top-border {
   border-top: solid #2A6A9E 3px;
+  margin-top:4px;
+
 }
 
 #bottom_border{
+  margin-top: 10px;
+  margin-bottom: 5px;
   border-top: solid #2A6A9E 3px;
 }
 
@@ -353,13 +450,40 @@ body.loading .vegeta {
   background-color:#ffce79;
 }
 
-/*#shops-results tbody tr:hover{
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffce79), color-stop(1, #eeaf41) );
-  background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
-  background-color:#ffce60;
-}*/
 
+table tbody tr td label{
+  font-size: 14px;
+}
+
+.table thead tr th{
+  text-align: center;
+  text-transform: uppercase;
+  font-style: bold;
+
+}
+
+
+.table tbody tr td{
+  text-align: center;
+}
+
+table tbody tr td input{
+  width: 95%;
+}
+
+table {
+  table-layout: fixed;
+}
+
+
+.modal-body {
+  overflow-y: auto;
+  max-height: 300px;
+  padding: 0px !important;
+  border-top:3px solid #2A6A9E;
+  margin-top:10px;
+  /*margin: 0 15px 0 -15px;*/
+}
 
 
 
